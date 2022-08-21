@@ -119,6 +119,7 @@
 }
 
 .about-inner {
+  align-items: center;
   @media #{$md-layout} {
     padding-top: 40px;
   }
@@ -130,6 +131,10 @@
       &.title {
         margin-bottom: 8px;
       }
+    }
+    ol {
+      font-weight: 300;
+      color: #717173;
     }
     p {
       &.description {
@@ -146,8 +151,21 @@
   }
 }
 
+.products-wrapper {
+  background-image: url(/assets/images/bgpage/BGAI5.png);
+  background-repeat: no-repeat;
+}
+
+.drone-wrapper {
+  background-image: url(/assets/images/bgpage/BGAD.png);
+  background-repeat: no-repeat;
+}
 .about-wrapper {
-  background-image: url('/bgpage/WWDBG.jpg');
+  // background-image: url();
+  background-image: url(/assets/images/bgpage/WWDBG.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  // background-size: cover;
   .thumbnail {
     position: relative;
     display: flex;

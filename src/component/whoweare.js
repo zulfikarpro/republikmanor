@@ -8,17 +8,20 @@ const WhoWeAre = () => {
       'With the auspices of the Ministry of Defense, Republik Technology is developing Indonesia’s defensive capabilities to face the growing threats of instability in the Asia Pacific Region through developments of military technology advancements. All our procurement strategies are strictly aligned with operational directions from the Indonesian National Armed Forces';
 
   return (
-    <div id="whoweare" className="fix" style={{}}>
+    <div id="" className="fix pt--100">
       <div
-        className="position-absolute"
-        style={{ width: '100vw', height: '100vh' }}
+        className=""
+        style={{ width: '100vw', height: '', background: 'black' }}
       >
-        <div className="about-area ptb--120">
-          {/* <div className="about-wrapper"> */}
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-7">
-                {/* <div className="about-inner inner">
+        <div id="whoweare" className="about-area">
+          <div className="about-wrapper ptb--120">
+            <div className="container">
+              <div className="row h-100">
+                <div className="col-lg-7 my-auto">
+                  <div
+                    className="about-inner inner"
+                    // style={{ marginTop: '30%' }}
+                  >
                     <div className="section-title">
                       <h2 className="title theme-gradient">{title}</h2>
                       <div className="mt--100" />
@@ -26,34 +29,15 @@ const WhoWeAre = () => {
                       <p className="text-light text-justify">{description1}</p>
                       <p className="text-light text-justify">{description2}</p>
                     </div>
-                  </div> */}
-              </div>
-              <div className="col-lg-5 align-content-end">
-                <div className="thumbnail">
-                  <img
-                    className="responsive bg-primary"
-                    src="/assets/images/whoweare/2 army.jpg"
-                    alt="Who We Are Images"
-                  />
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          {/* </div> */}
-        </div>
-      </div>
-      <div className="about-area ptb--120">
-        <div className="about-wrapper">
-          <div className="container">
-            <div className="row row--65 align-items-center">
-              <div className="col-lg-7 align-content-start">
-                <div className="about-inner inner">
-                  <div className="section-title">
-                    <h2 className="title theme-gradient">{title}</h2>
-                    <div className="mt--100" />
-                    <h3 className="">Established 2020</h3>
-                    <p className="text-light text-justify">{description1}</p>
-                    <p className="text-light text-justify">{description2}</p>
+                <div className="col-lg-5 align-content-end">
+                  <div className="thumbnail">
+                    {/* <img
+                      className="responsive bg-primary"
+                      src="/assets/images/whoweare/2 army.jpg"
+                      alt="Who We Are Images"
+                    /> */}
                   </div>
                 </div>
               </div>

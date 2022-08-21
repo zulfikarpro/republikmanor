@@ -4,6 +4,15 @@
 
 .section-title {
   margin-top: -20px;
+
+  ol.directions {
+    li::marker {
+      content: '+ ';
+      font-weight: 400;
+      color: rgb(255, 191, 0);
+      // @extend p;
+    }
+  }
   h2 {
     &.title {
       font-size: 80px;

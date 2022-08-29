@@ -7,8 +7,8 @@ function MobileSOC() {
         className=""
         style={{ width: '100vw', height: '', background: 'black' }}
       >
-        <div id="whoweare" className="about-area">
-          <div className="products-wrapper pt--200 pb--120">
+        <div id="" className="about-area">
+          <div className="products-wrapper pb--120">
             <div className="container pt--120">
               <div className="row h-100">
                 <div className="col-lg-5 align-content-start">
@@ -29,7 +29,7 @@ function MobileSOC() {
                           'Represented by the software module, which could be integrated in to the standard AD or MATC system. This GCI software supports the operation of the different type of the aircraft starting by the 2nd up to 5th fighter aircraft generation. Provides the several types of the Ground Controlled Interception, including :'
                         }
                       </p>
-                      <ol className="directions text-light">
+                      <ul className="directions text-light">
                         <p className="text-light">
                           <li>Fighter guidance optimization </li>
                         </p>
@@ -53,7 +53,7 @@ function MobileSOC() {
                             Analysis he optimal shooting conditions for the gun
                           </li>
                         </p>
-                      </ol>
+                      </ul>
                     </div>
                   </div>
                 </div>

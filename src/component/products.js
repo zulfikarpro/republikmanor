@@ -1,14 +1,9 @@
 import React from 'react';
 const productLTR = (images, title, text) => {
   return (
-    <div className="container row mt--60 justify-content-between">
+    <div className="container row mt--60 justify-content-between productItem">
       <div className="col-lg-6 col-md-6 col-sm-12 col-12 my-auto">
-        <img
-          className="rounded mx-auto d-block"
-          style={{ maxWidth: '450px' }}
-          src={images}
-          alt="test"
-        ></img>
+        <img className="rounded mx-auto d-block" src={images} alt={title}></img>
       </div>
       <div className="col-lg-6 col-md- col-sm-12 col-12 my-auto">
         <h3>{title}</h3>
@@ -17,21 +12,30 @@ const productLTR = (images, title, text) => {
     </div>
   );
 };
-const productRTL = (images, title, text) => {
+const productRTL = (images, title, text, array) => {
   return (
-    <div className="container row mt--60">
+    // <></>
+    <div className="productItem rtl mt--60">
       <div className="col-lg-6 col-md- col-sm-12 col-12 my-auto">
         <h3>{title}</h3>
         <p className="text-light text-justify">{text}</p>
+        {array ? (
+          <div className="orderNumber">
+            <ul className="directions">
+              {array.map((item, index) => (
+                <p className="description text-light">
+                  <li>{item}</li>
+                </p>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          ''
+        )}
       </div>
 
       <div className="col-lg-6 col-md-6 col-sm-12 col-12 my-auto">
-        <img
-          className="rounded mx-auto d-block"
-          style={{ maxWidth: '450px' }}
-          src={images}
-          alt="test"
-        ></img>
+        <img className="rounded mx-auto d-block" src={images} alt={title}></img>
       </div>
     </div>
   );
@@ -40,16 +44,17 @@ const Products = () => {
   return (
     <div id="products">
       <div
-        className=" rn-blog-area ptb--120 mb-dec--30 row"
+        className="rn-blog-area ptb--120 mb-dec--30 row"
         style={{
           background: `url(/assets/images/bgpage/bgproducts.png)`,
-          backgroundSize: '90%',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
           backgroundPositionX: 'center',
         }}
       >
         <div className="container">
           <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
-            <h2 className="title">PRODUCTS</h2>
+            <h2 className="title theme-gradient">PRODUCTS</h2>
             <h2 className="text-center">ICCS</h2>
           </div>
           <h4 className="text-center">
@@ -78,11 +83,21 @@ const Products = () => {
             'assets/images/products/radio.png',
             'Radio Intercom',
             'The personal network radio features advanced technology that enables PERSONNEL ICCS to provide the dismounted soldier with combat-proven simultaneous digital voice and data communications on the battlefield.',
+            [
+              'Channel equalization.',
+              'Error correction.',
+              'Routing and networking.',
+              'Ad-hoc networking and automatic voice/data relays.',
+              'Full-duplex conference capability up to six speakers.',
+              'Long-range (3 Km) communications. ',
+              'Robust build for complex terrain.',
+              'Low power consumption.',
+            ],
           )}
           {productLTR(
             'assets/images/products/smarteye.png',
             'Smarteye - headmounted C2 display',
-            'Ballistic goggles that provide descending commanders with a C2 display that installed in the head geo-geographically oriented. Projecting Augmented symbology Reality (AR) translucent on the visor and allows real-time image detection, SmartEye provides users with instant situational awareness, an integrated lens with AGD to show Red Force coordinates and possible threats.',
+            'Ballistic goggles that provide descending commanders with a C2 display\nthat installed in the head geo-geographically oriented. Projecting Augmented\nsymbology Reality (AR) translucent on the visor and allows real-time\nimage detection, SmartEye provides users with instant situational\nawareness, an integrated lens with AGD to show Red Force coordinates\nand possible threats. SmartEye interacts with a variety of visual sources\nincluding scenery weapons, Unmanned Aircraft Systems (UAS) and input from\nreconnaissance units.',
           )}
         </div>
       </div>

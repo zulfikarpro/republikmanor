@@ -27,7 +27,7 @@ class SliderFive extends Component {
             <div className="row align-items-center">
               <div className="col-lg-12 align-items-center">
                 <div className="inner">
-                  <h2 className="h2">Wer Are Advance in</h2>
+                  <h2 className="h2">We Are Advance in</h2>
                   <div className="front-title">
                     Military Technology <br /> Industry
                   </div>

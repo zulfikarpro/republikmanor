@@ -8,15 +8,15 @@ function AntiDrone() {
         style={{ width: '100vw', height: '', background: 'black' }}
       >
         <div id="whoweare" className="about-area">
-          <div className="drone-wrapper pt--200 pb--120">
+          <div className="drone-wrapper pb--120">
             <div className="container pt--120">
-              <div className="row h-100">
+              <div className="drone-column h-100">
                 <div className="col-lg-7 align-content-end">
                   <div className="about-inner inner">
                     <div className="section-title">
                       <h2 className="">{'ANTI-DRONE'}</h2>
                       <div className="row">
-                        <ol className="col-lg-5 directions text-light">
+                        <ul className="col-lg-5 directions text-light">
                           <p className="text-light">
                             <li>Detect and classify all commercial drones. </li>
                           </p>
@@ -41,8 +41,8 @@ function AntiDrone() {
                               Automatic or manual jamming (man-in-the-loop).
                             </li>
                           </p>
-                        </ol>
-                        <ol className="col-lg-5 directions text-light">
+                        </ul>
+                        <ul className="col-lg-5 directions text-light">
                           <p className="text-light">
                             <li>Smart jammer with waveform control.</li>
                           </p>
@@ -64,7 +64,7 @@ function AntiDrone() {
                           <p className="text-light">
                             <li>Military standard</li>
                           </p>
-                        </ol>
+                        </ul>
                       </div>
                     </div>
                   </div>

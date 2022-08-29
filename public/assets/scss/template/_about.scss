@@ -152,20 +152,31 @@
 }
 
 .products-wrapper {
-  background-image: url(/assets/images/bgpage/BGAI5.png);
+  background-image: url(/assets/images/bgpage/BGADOC.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .drone-wrapper {
   background-image: url(/assets/images/bgpage/BGAD.png);
   background-repeat: no-repeat;
+  background-size: cover;
+
+  .drone-column {
+    display: flex;
+    @media #{$sm-layout} {
+      flex-direction: column-reverse;
+    }
+  }
 }
 .about-wrapper {
   // background-image: url();
   background-image: url(/assets/images/bgpage/WWDBG.png);
   background-repeat: no-repeat;
   background-position: right;
-  // background-size: cover;
+  @media #{$sm-layout} {
+    background-position: bottom;
+  }
   .thumbnail {
     position: relative;
     display: flex;
@@ -185,10 +196,12 @@
         margin-top: -89px;
       }
       @media #{$md-layout} {
+        max-height: 280px;
+        background-position: bottom;
       }
       @media #{$sm-layout} {
         max-height: 280px;
-        align-self: center;
+        background-position: bottom;
       }
     }
   }

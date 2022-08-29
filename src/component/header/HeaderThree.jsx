@@ -65,7 +65,7 @@ class HeaderThree extends Component {
         <img
           src="/assets/images/logo/republikteknologi.png"
           alt="logo"
-          style={{ maxWidth: '200px' }}
+          // style={{ maxWidth: '200px' }}
         />
       );
     } else if (logo === 'symbol-light') {
@@ -86,7 +86,7 @@ class HeaderThree extends Component {
         <div className="header-wrapper">
           <div className="header-left d-flex align-items-center">
             <div className="logo">
-              <a href={'/index'}>{logoUrl}</a>
+              <a href={'/'}>{logoUrl}</a>
             </div>
           </div>
 

@@ -23,7 +23,11 @@ const WhoWeAre = () => {
                     // style={{ marginTop: '30%' }}
                   >
                     <div className="section-title">
-                      <h2 className="title theme-gradient">{title}</h2>
+                      <h2 className="title">
+                        <span className="theme-gradient">Who</span>
+                        <span className="text-light"> We </span>
+                        <span className="theme-gradient">Are</span>
+                      </h2>
                       <div className="mt--100" />
                       <h3 className="">Established 2020</h3>
                       <p className="text-light text-justify">{description1}</p>

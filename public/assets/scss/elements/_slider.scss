@@ -666,18 +666,95 @@ Slick Animation For Slider
     .slide {
       &.slide-style-2 {
         .inner {
-          h1 {
+          li::marker {
+            content: '+ ';
+            font-weight: 400;
+            color: rgb(255, 191, 0);
+          }
+          ol.directions {
+            margin-left: 0%;
+            padding-left: 0%;
+            p {
+              // &.description {
+              //   font-size: $h4;
+              //   -webkit-animation: 1000ms ease-in-out 0s normal none 1 running
+              //     customOne;
+              //   animation: 1000ms ease-in-out 0s normal none 1 running customOne;
+              //   @media #{$sm-layout} {
+              //     font-size: 1px;
+              //   }
+              // }
+            }
+            li {
+              font-size: $h4;
+              text-align: justify;
+              margin-left: 0%;
+              padding-left: 0%;
+              @media #{$sm-layout} {
+                font-size: 10px;
+                text-align: justify;
+                margin-left: 0;
+              }
+            }
+            li::marker {
+              content: '+ ';
+              font-weight: 400;
+              color: rgb(255, 191, 0);
+            }
+          }
+          h2 {
             &.title {
+              font-size: $h2;
               -webkit-animation: 800ms ease-in-out 0s normal none 1 running
                 customOne;
               animation: 800ms ease-in-out 0s normal none 1 running customOne;
+              @media #{$sm-layout} {
+                text-align: center;
+                font-size: $h5;
+                margin-top: 10vh;
+              }
             }
           }
-          p {
+          h3 {
+            &.title {
+              font-size: $h3;
+              -webkit-animation: 800ms ease-in-out 0s normal none 1 running
+                customOne;
+              animation: 800ms ease-in-out 0s normal none 1 running customOne;
+              @media #{$sm-layout} {
+                text-align: center;
+                font-size: $h5;
+                margin-top: 10vh;
+              }
+            }
+          }
+
+          .desc {
+            font-size: $h4;
+            color: white;
+            display: flex;
+            align-content: flex-end;
+            max-width: 50%;
+            @media #{$sm-layout} {
+              max-width: 100%;
+              font-size: 14px;
+              text-align: justify;
+            }
             &.description {
+              color: white;
               -webkit-animation: 1000ms ease-in-out 0s normal none 1 running
                 customOne;
               animation: 1000ms ease-in-out 0s normal none 1 running customOne;
+            }
+            &.array {
+              color: white;
+              -webkit-animation: 1000ms ease-in-out 0s normal none 1 running
+                customOne;
+              animation: 1000ms ease-in-out 0s normal none 1 running customOne;
+              .span {
+                font-weight: 400;
+                color: rgb(255, 191, 0);
+              }
             }
           }
           .slide-btn {
@@ -718,6 +795,10 @@ Slider Default Button And Dot STyle
           }
           .h2 {
             font-weight: 200;
+            font-size: $h2;
+            @media #{$sm-layout} {
+              font-size: $h3;
+            }
           }
           .h4 {
             width: 20px;

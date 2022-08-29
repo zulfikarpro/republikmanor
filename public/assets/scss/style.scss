@@ -64,7 +64,6 @@
 
 ***************************************************************/
 
-
 /**************************************
     Default Styles
 ***************************************/
@@ -77,15 +76,12 @@
 @import 'default/shortcode';
 @import 'default/spacing';
 
-
-
 /**************************************
     Header Styles
 ***************************************/
 
 @import 'header/header';
 @import 'header/mainmenu';
-
 
 /**************************************
     Inner Styles
@@ -97,8 +93,6 @@
 @import 'common/pagination';
 @import 'common/socialicon';
 @import 'common/footer';
-
-
 
 /**************************************
     Elements Styles
@@ -120,8 +114,7 @@
 @import 'elements/column';
 @import 'elements/404';
 @import 'elements/pricing';
-
-
+@import 'elements/video';
 
 /**************************************
     Blog Styles
@@ -129,8 +122,6 @@
 
 @import 'blog/blog';
 @import 'blog/blog-details';
-
-
 
 /**************************************
     Template Styles

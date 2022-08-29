@@ -22,6 +22,10 @@ import Products from '../component/products';
 import ProductAi from '../component/productsai';
 import MobileSOC from '../component/mobileSoc';
 import AntiDrone from '../component/antidrone';
+import { Ai1 } from '../component/ai1';
+import { Ai2 } from '../component/ai2';
+import { Ai3 } from '../component/ai3';
+import { Ai4 } from '../component/ai4';
 
 const SlideList = [
   {
@@ -199,15 +203,17 @@ const MainPage = () => {
         style={{ height: '100vh', width: '100vw', zIndex: -1 }}
       >
         <div className="position-fixed d-inline-block h-100 w-100">
-          <video
-            className="position-fixed d-inline-block w-100"
-            playsinline="playsinline"
-            autoplay="autoplay"
-            muted="muted"
-            loop="loop"
-            src="/assets/video/videofix.mp4"
-            style={{ zIndex: -1 }}
-          ></video>
+          <div className="row justify-content-center bg-success">
+            <video
+              className="hidden position-fixed d-inline-block videos"
+              playsinline="playsinline"
+              autoplay="autoplay"
+              muted="muted"
+              loop="loop"
+              src="/assets/video/videofix2.mp4"
+              style={{ zIndex: -1 }}
+            />
+          </div>
         </div>
       </div>
       <div className="active-dark bg-transparent" style={{ zIndex: 100 }}>
@@ -291,19 +297,57 @@ const MainPage = () => {
         {/* End Portfolio Area */}
 
         {Whatwedo()}
-
         {Products()}
         {ProductAi()}
+        {/* <div className="vh-100">
+          <div
+            className="position-absolute"
+            style={{ height: '100vh', width: '100vw', zIndex: 3 }}
+          >
+            <div className="container">
+              <div className="row justify-content-center pt--100">
+                <div className="col-lg-12 row justify-content-center title">
+                  <span className="mx-auto">ARTIFICIAL INTELLIGENCE</span>
+                </div>
+                <div className="col-lg-12 row justify-content-center subtitle">
+                  SURVEILLANCE, CYBER, AND MULTI-INTELLIGENCE{' '}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+          <Carousel showArrows={true}>
+            <div>
+              <img src="assets/images/bgpage/BGAI.jpg" />
+              <p>test</p>
+            </div>
+            <div>
+              <img src="assets/images/bgpage/BGAI2.jpg" />
+            </div>
+            <div>
+              <img src="assets/images/bgpage/BGAI3.jpg" />
+            </div>
+            <div>
+              <img src="assets/images/bgpage/BGAI4.jpg" />
+            </div>
+          </Carousel>
+          </div>
+        </div> */}
         {MobileSOC()}
         {AntiDrone()}
-        <div className="fix bg-transparent ptb--120">
+        <div className="groupComp">
           <div className="row justify-content-around">
-            <h2>Part of Republikorp</h2>
-            <img
-              className="thumbnail bg-transparent"
-              src="/assets/images/logo/republikorp.png"
-              alt="republikorp"
-            />
+            <div className="col-lg-5 col-sm-12 row justify-content-center">
+              <h2 className="text my-auto">Part of Republikorp</h2>
+            </div>
+            <div className="col-lg-7 col-sm-12 row justify-content-center">
+              <img
+                className="thumbnail bg-transparent mx-auto"
+                src="/assets/images/logo/republikorp.png"
+                alt="republikorp"
+                style={{ maxWidth: '60%' }}
+              />
+            </div>
           </div>
         </div>
         <div
@@ -319,36 +363,40 @@ const MainPage = () => {
             className="rn-blog-area ptb--100"
             style={{
               background: `url(assets/images/bgpage/bgpartner.png)`,
-              backgroundSize: '100vw',
+              backgroundSize: 'cover',
+              backgroundRepeat: 'no-repeat',
             }}
           >
             <div className="container">
               <div className="row align-items-end">
                 <div className="col-lg-6 col-md-12 col-sm-12 col-12 mx-auto">
-                  <h1 className="text-light text-center">Partners</h1>
-                  <hr class="mb-3 mx-auto col-lg-4" />
+                  <h1 className="text-light text-center">PARTNERS</h1>
+                  {/* <hr class="mb-3 mx-auto col-lg-4" /> */}
                 </div>
               </div>
               <div className="row pb--120 mb--100">
-                <div className="d-flex col-lg-4 col-sm-12 mt--140 align-items-center ">
+                <div className="d-flex col-lg-4 col-sm-12 mt--100 align-items-center justify-content-center">
                   <img
-                    className="w-20 rounded my-auto"
+                    className="w--10 rounded my-auto "
                     src="/assets/images/partners/CSG.png"
-                    alt="ak3"
+                    alt="csg"
+                    style={{ width: '40vw' }}
                   />
                 </div>
-                <div className="d-flex col-lg-4 col-sm-12 mt--140 align-items-center">
+                <div className="d-flex col-lg-4 col-sm-12 mt--100 align-items-center justify-content-center">
                   <img
-                    className="w-20 rounded my-auto"
+                    className="inline-block rounded my-auto thumbnail"
                     src="/assets/images/partners/ex-army-02.png"
-                    alt="ak"
+                    alt="ea"
+                    style={{ width: '50vw' }}
                   />
                 </div>
-                <div className="d-flex col-lg-4 col-sm-12 mt--140 align-items-center ">
+                <div className="d-flex col-lg-4 col-sm-12 mt--100 align-items-center justify-content-center">
                   <img
-                    className="w-20 rounded"
+                    className="w--20 rounded"
                     src="/assets/images/partners/excaliburw.png"
-                    alt="ak3"
+                    alt="ei"
+                    style={{ width: '50vw' }}
                   />
                 </div>
               </div>
@@ -356,19 +404,45 @@ const MainPage = () => {
           </div>
         </div>
         <div
-          className="fix"
-          style={
-            {
-              // background: `url(/assets/images/workshop/bg_workshop3.jpg)`,
-            }
-          }
+          className="fix row align-items-end pb--50"
+          style={{
+            background: `url(assets/images/bgpage/bgcontact.png)`,
+            backgroundSize: 'cover',
+            height: '50vh',
+          }}
         >
-          <div
+          <div id="contactus" className="container">
+            <div className="row justify-content-around">
+              <div className="col-lg-5 col-sm-12">
+                <img
+                  src="/assets/images/logo/republikteknologi.png"
+                  alt="logo"
+                  style={{ maxWidth: '200px' }}
+                  className="mb-4"
+                />
+                <p className="text-light">
+                  RPX Building 9Th Floor, Ciputat Raya No. 99,
+                  <br />
+                  South Jakarta, Indonesia, 12310
+                  <br />
+                  +62 21 75 918 007
+                  <br />
+                  info@republikarmamen.com
+                </p>
+              </div>
+
+              <div
+                className="col-lg-7 col-md-12 col-sm-12 col-12 text-light footerText"
+                // style={{ fontSize: '10px' }}
+              >
+                © 2021 Republik Armamen. Trademarks and brands are the property
+                of their respective owners.
+              </div>
+            </div>
+          </div>
+          {/* <div
             id="contactus"
             className="rn-blog-area pt--200"
-            style={{
-              background: `url(assets/images/bgpage/bgcontact.png)`,
-              backgroundSize: '100vw',
             }}
           >
             <div className="container pt--200">
@@ -391,13 +465,16 @@ const MainPage = () => {
                   </p>
                 </div>
 
-                <div className="col-lg-7 col-md-12 col-sm-12 col-12 text-light text-right">
+                <div
+                  className="col-lg-7 col-md-12 col-sm-12 col-12 text-light text-right "
+                  style={{ fontSize: '10px' }}
+                >
                   © 2021 Republik Armamen. Trademarks and brands are the
                   property of their respective owners.
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="backto-top">

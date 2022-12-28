@@ -2,30 +2,30 @@ import React, { useState, useEffect } from 'react';
 import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from 'react-icons/fi';
 import Helmet from '../component/common/Helmet';
-import TextLoop from 'react-text-loop';
+// import TextLoop from 'react-text-loop';
 import SliderFive from '../component/slider/SliderFive';
 import HeaderThree from '../component/header/HeaderThree';
-import FooterTwo from '../component/footer/FooterTwo';
-import TabTwo from '../elements/tab/TabTwo';
-import ContactThree from '../elements/contact/ContactThree';
-import PortfolioList from '../elements/portfolio/PortfolioList';
-import ServiceList from '../elements/service/ServiceList';
+// import FooterTwo from '../component/footer/FooterTwo';
+// import TabTwo from '../elements/tab/TabTwo';
+// import ContactThree from '../elements/contact/ContactThree';
+// import PortfolioList from '../elements/portfolio/PortfolioList';
+// import ServiceList from '../elements/service/ServiceList';
 import BlogContent from '../elements/blog/BlogContent';
-import HeaderFive from '../component/header/HeaderFive';
-import HeaderSix from '../component/header/HeaderSix';
-import SliderFour from '../component/slider/SliderFour';
-import Portfolio from '../component/HomeLayout/homeOne/Portfolio';
-import Carousel from 'react-bootstrap/Carousel';
+// import HeaderFive from '../component/header/HeaderFive';
+// import HeaderSix from '../component/header/HeaderSix';
+// import SliderFour from '../component/slider/SliderFour';
+// import Portfolio from '../component/HomeLayout/homeOne/Portfolio';
+// import Carousel from 'react-bootstrap/Carousel';
 import WhoWeAre from '../component/whoweare';
 import Whatwedo from '../component/whatwedo';
 import Products from '../component/products';
-import ProductAi from '../component/productsai';
-import MobileSOC from '../component/mobileSoc';
-import AntiDrone from '../component/antidrone';
-import { Ai1 } from '../component/ai1';
-import { Ai2 } from '../component/ai2';
-import { Ai3 } from '../component/ai3';
-import { Ai4 } from '../component/ai4';
+// import ProductAi from '../component/productsai';
+// import MobileSOC from '../component/mobileSoc';
+// import AntiDrone from '../component/antidrone';
+// import { Ai1 } from '../component/ai1';
+// import { Ai2 } from '../component/ai2';
+// import { Ai3 } from '../component/ai3';
+// import { Ai4 } from '../component/ai4';
 
 const SlideList = [
   {
@@ -210,14 +210,32 @@ const MainPage = () => {
               autoplay="autoplay"
               muted="muted"
               loop="loop"
-              src="/assets/video/videofix2.mp4"
+              src="/assets/video/1.mp4"
               style={{ zIndex: -1 }}
             />
           </div>
         </div>
       </div>
+      {/* <div
+        className="position-absolute"
+        style={{ height: '100vh', width: '100vw', zIndex: -1 }}
+      >
+        <div className="position-fixed d-inline-block h-100 w-100">
+          <div className="row justify-content-center bg-success">
+            <video
+              className="hidden position-fixed d-inline-block videos"
+              playsinline="playsinline"
+              autoplay="autoplay"
+              muted="muted"
+              loop="loop"
+              src="/assets/video/KAPITAL.mp4"
+              style={{ zIndex: -1, width: '100vw' }}
+            />
+          </div>
+        </div>
+      </div> */}
       <div className="active-dark bg-transparent" style={{ zIndex: 100 }}>
-        <Helmet pageTitle="Republik Technology" />
+        <Helmet pageTitle="Republik Kapital" />
 
         <HeaderThree
           className="mx-auto"
@@ -226,255 +244,76 @@ const MainPage = () => {
           color="color-black"
         />
 
-        <div id="home" className="fix">
-          <div className="slider-wrapper ">
-            <SliderFive />
-          </div>
+        <div id="home">
+          <SliderFive />
         </div>
-        {/* Start Slider Area   */}
-        {/* <div id="home" className="fix">
-                <div className="slider-wrapper"> */}
-        {/* Start Single Slide */}
-        {/* {SlideList.map((value , index) => (
-                        <div className="slide personal-portfolio-slider slider-paralax slider-style-3 d-flex align-items-center justify-content-center bg_image bg_image--25" key={index}>
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-lg-12">
-                                        <div className={`inner ${value.textPosition}`}>
-                                            {value.category ? <span>{value.category}</span> : ''}
-                                            <h1 className="title">Hi, I’m Jone Doe <br/>
-                                            <TextLoop>
-                                                <span> JS Developer.</span>
-                                                <span> UI/UX Designer.</span>
-                                                <span> Content Writter.</span>
-                                            </TextLoop>{" "}
-                                            </h1>
-                                            <h2>based in USA.</h2>
-                                            {value.description ? <p className="description">{value.description}</p> : ''}
-                                            {value.buttonText ? <div className="slide-btn"><a className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))} */}
-        {/* End Single Slide */}
-        {/* </div>
-            </div> */}
-        {/* End Slider Area   */}
-
-        {/* Start About Area */}
-        {/* <div id="whoweare"> */}
-        {WhoWeAre()}
-        {/* </div> */}
-
-        {/* End About Area */}
-
-        {/* Start Service Area  */}
-        {/* <div id="service" className="fix">
-                <div className="service-area creative-service-wrapper ptb--120 bg_color--5" >
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-12">
-                                <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
-                                    <h2 className="title">My Awesome Service</h2>
-                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row creative-service">
-                            <div className="col-lg-12">
-                                <ServiceList item="6" column="col-lg-4 col-md-6 col-sm-6 col-12 text-left" />
-                            </div>
-                        </div>
-                    </div>
-                </div>  
-            </div> */}
-        {/* End Service Area  */}
-
-        {/* Start Portfolio Area */}
-
-        {/* End Portfolio Area */}
-
-        {Whatwedo()}
-        {Products()}
-        {ProductAi()}
-        {/* <div className="vh-100">
-          <div
-            className="position-absolute"
-            style={{ height: '100vh', width: '100vw', zIndex: 3 }}
-          >
-            <div className="container">
-              <div className="row justify-content-center pt--100">
-                <div className="col-lg-12 row justify-content-center title">
-                  <span className="mx-auto">ARTIFICIAL INTELLIGENCE</span>
-                </div>
-                <div className="col-lg-12 row justify-content-center subtitle">
-                  SURVEILLANCE, CYBER, AND MULTI-INTELLIGENCE{' '}
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-          <Carousel showArrows={true}>
-            <div>
-              <img src="assets/images/bgpage/BGAI.jpg" />
-              <p>test</p>
-            </div>
-            <div>
-              <img src="assets/images/bgpage/BGAI2.jpg" />
-            </div>
-            <div>
-              <img src="assets/images/bgpage/BGAI3.jpg" />
-            </div>
-            <div>
-              <img src="assets/images/bgpage/BGAI4.jpg" />
-            </div>
-          </Carousel>
-          </div>
-        </div> */}
-        {MobileSOC()}
-        {AntiDrone()}
-        <div className="groupComp">
-          <div className="row justify-content-around">
-            <div className="col-lg-5 col-sm-12 row justify-content-center">
-              <h2 className="text my-auto">Part of Republikorp</h2>
-            </div>
-            <div className="col-lg-7 col-sm-12 row justify-content-center">
+        <WhoWeAre />
+        <Whatwedo />
+        {/* <Products /> */}
+        <div
+          className="groupComp"
+          style={{
+            background: `url(/assets/images/bgpage/bgmemberof.jpg)`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPositionX: 'center',
+            height: '100vh',
+          }}
+        >
+          <div className="container justify-content-between">
+            <h2 className="text-dark text-center mb--100">Member of</h2>
+            <div className="row align-items-center">
               <img
                 className="thumbnail bg-transparent mx-auto"
-                src="/assets/images/logo/republikorp.png"
+                src="/assets/images/logo/republikorp2.png"
                 alt="republikorp"
                 style={{ maxWidth: '60%' }}
               />
             </div>
           </div>
         </div>
-        <div
-          className="fix"
-          style={
-            {
-              // background: `url(/assets/images/workshop/bg_workshop3.jpg)`,
-            }
-          }
-        >
-          <div
-            id="partner"
-            className="rn-blog-area ptb--100"
-            style={{
-              background: `url(assets/images/bgpage/bgpartner.png)`,
-              backgroundSize: 'cover',
-              backgroundRepeat: 'no-repeat',
-            }}
-          >
-            <div className="container">
-              <div className="row align-items-end">
-                <div className="col-lg-6 col-md-12 col-sm-12 col-12 mx-auto">
-                  <h1 className="text-light text-center">PARTNERS</h1>
-                  {/* <hr class="mb-3 mx-auto col-lg-4" /> */}
-                </div>
-              </div>
-              <div className="row pb--120 mb--100">
-                <div className="d-flex col-lg-4 col-sm-12 mt--100 align-items-center justify-content-center">
-                  <img
-                    className="w--10 rounded my-auto "
-                    src="/assets/images/partners/CSG.png"
-                    alt="csg"
-                    style={{ width: '40vw' }}
-                  />
-                </div>
-                <div className="d-flex col-lg-4 col-sm-12 mt--100 align-items-center justify-content-center">
-                  <img
-                    className="inline-block rounded my-auto thumbnail"
-                    src="/assets/images/partners/ex-army-02.png"
-                    alt="ea"
-                    style={{ width: '50vw' }}
-                  />
-                </div>
-                <div className="d-flex col-lg-4 col-sm-12 mt--100 align-items-center justify-content-center">
-                  <img
-                    className="w--20 rounded"
-                    src="/assets/images/partners/excaliburw.png"
-                    alt="ei"
-                    style={{ width: '50vw' }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div
           className="fix row align-items-end pb--50"
           style={{
-            background: `url(assets/images/bgpage/bgcontact.png)`,
+            background: `url(assets/images/bgpage/bgcontact.jpg)`,
             backgroundSize: 'cover',
-            height: '50vh',
+            height: '100vh',
           }}
         >
           <div id="contactus" className="container">
-            <div className="row justify-content-around">
-              <div className="col-lg-5 col-sm-12">
+            <div className="col justify-content-around">
+              <div className="row align-items-center">
                 <img
-                  src="/assets/images/logo/republikteknologi.png"
+                  src="/assets/images/logo/logo2.png"
                   alt="logo"
-                  style={{ maxWidth: '200px' }}
-                  className="mb-4"
+                  style={{ maxWidth: '60%' }}
+                  className="mb-4 mx-auto"
                 />
-                <p className="text-light">
-                  RPX Building 9Th Floor, Ciputat Raya No. 99,
-                  <br />
-                  South Jakarta, Indonesia, 12310
-                  <br />
-                  +62 21 75 918 007
-                  <br />
-                  info@republikarmamen.com
-                </p>
               </div>
 
-              <div
-                className="col-lg-7 col-md-12 col-sm-12 col-12 text-light footerText"
-                // style={{ fontSize: '10px' }}
+              <p
+                className="text-center font-weight-bold"
+                style={{ color: 'black' }}
               >
-                © 2021 Republik Armamen. Trademarks and brands are the property
-                of their respective owners.
+                RPX Building 9<sup>th</sup> Floor
+                <br />
+                Ciputat Raya No. 99
+                <br />
+                South Jakarta, Indonesia, 12310
+                <br />
+                +62 21 75 918 007 - info@republikapital.com
+              </p>
+
+              <div
+                className="col-lg-12 col-md-12 col-sm-12 col-12 text-center footerText"
+                style={{ color: 'black' }}
+              >
+                © 2022 Republik Manor. Trademarks and brands are the property of
+                their respective owners.
               </div>
             </div>
           </div>
-          {/* <div
-            id="contactus"
-            className="rn-blog-area pt--200"
-            }}
-          >
-            <div className="container pt--200">
-              <div className="row align-items-end justify-content-around pb--40">
-                <div className="col-lg-5 col-md-12 col-sm-12 col-12">
-                  <img
-                    src="/assets/images/logo/republikteknologi.png"
-                    alt="logo"
-                    style={{ maxWidth: '200px' }}
-                    className="mb-4"
-                  ></img>
-                  <p className="text-light">
-                    RPX Building 9Th Floor, Ciputat Raya No. 99,
-                    <br />
-                    South Jakarta, Indonesia, 12310
-                    <br />
-                    +62 21 75 918 007
-                    <br />
-                    info@republikarmamen.com
-                  </p>
-                </div>
-
-                <div
-                  className="col-lg-7 col-md-12 col-sm-12 col-12 text-light text-right "
-                  style={{ fontSize: '10px' }}
-                >
-                  © 2021 Republik Armamen. Trademarks and brands are the
-                  property of their respective owners.
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
 
         <div className="backto-top">
@@ -483,6 +322,10 @@ const MainPage = () => {
           </ScrollToTop>
         </div>
         {/* End Back To Top */}
+        <div
+          className="flex"
+          style={{ height: '80px', background: `rgba(0,40,40,08)` }}
+        />
       </div>
     </>
   );

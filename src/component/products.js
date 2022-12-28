@@ -40,20 +40,52 @@ const productRTL = (images, title, text, array) => {
     </div>
   );
 };
+
+const ProductPage = ({ images, label }) => {
+  return (
+    <>
+      <div className="col-lg-4 align-items-end">
+        <img
+          className="responsive"
+          src={`/assets/images/products/${images}`}
+          alt={images}
+        />
+        <h3 className="text-dark text-center font-weight-bold mt--10">
+          {label}
+        </h3>
+      </div>
+    </>
+  );
+};
 const Products = () => {
   return (
     <div id="products">
       <div
-        className="rn-blog-area ptb--120 mb-dec--30 row"
+        className="row justify-content-center"
         style={{
-          background: `url(/assets/images/bgpage/bgproducts.png)`,
+          background: `url(/assets/images/bgpage/bgproducts.jpg)`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPositionX: 'center',
+          height: '100vh',
         }}
       >
-        <div className="container">
-          <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
+        <div className="col-lg-10 align-self-center">
+          <h2 className="text-dark text-center">PRODUCTS & SERVICES</h2>
+          <div className="container">
+            <div className="row mt--100 w--100">
+              <ProductPage
+                images={'product-01.png'}
+                label={'Assets Management'}
+              />
+              <ProductPage
+                images={'product-02.png'}
+                label={'Investment Banking'}
+              />
+              <ProductPage images={'product-03.png'} label={'Corporate M&A'} />
+            </div>
+          </div>
+          {/* <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
             <h2 className="title theme-gradient">PRODUCTS</h2>
             <h2 className="text-center">ICCS</h2>
           </div>
@@ -98,7 +130,7 @@ const Products = () => {
             'assets/images/products/smarteye.png',
             'Smarteye - headmounted C2 display',
             'Ballistic goggles that provide descending commanders with a C2 display\nthat installed in the head geo-geographically oriented. Projecting Augmented\nsymbology Reality (AR) translucent on the visor and allows real-time\nimage detection, SmartEye provides users with instant situational\nawareness, an integrated lens with AGD to show Red Force coordinates\nand possible threats. SmartEye interacts with a variety of visual sources\nincluding scenery weapons, Unmanned Aircraft Systems (UAS) and input from\nreconnaissance units.',
-          )}
+          )} */}
         </div>
       </div>
     </div>

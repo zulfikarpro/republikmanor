@@ -120,6 +120,7 @@
 
 .about-inner {
   align-items: center;
+  // padding-right: 20px;
   @media #{$md-layout} {
     padding-top: 40px;
   }
@@ -170,10 +171,25 @@
   }
 }
 .about-wrapper {
-  // background-image: url();
-  background-image: url(/assets/images/bgpage/WWDBG.png);
+  background: transparent;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &.whoweare {
+    height: 100vh;
+    background-image: url(/assets/images/bgpage/bgwhoweare.jpg);
+    @media #{$laptop-device} {
+      padding: 60px;
+    }
+  }
+  @media #{$laptop-device} {
+    background-size: contain;
+  }
   @media #{$sm-layout} {
     background-position: bottom;
   }

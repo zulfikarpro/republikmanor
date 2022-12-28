@@ -1,78 +1,107 @@
 import React, { Component } from 'react';
+import { Container } from 'react-bootstrap';
 
 const Whatwedo = () => {
+  const description1 = `
+  Republik Kapital is a subsidiary company of Republikorp
+  which engages in the field of finance, investment, and
+  monetizing asset management for a specific industry
+  in Indonesia.`;
   return (
-    <div id="whatwedo" className="fix">
+    <div
+      id="whatwedo"
+      className="fix about-area bg-transparent"
+      style={{ width: '100vw', height: '100vh' }}
+    >
+      {/* <div
+        className="col h-100 justify-content-center align-items-center"
+        style={{ background: `rgba(255,255,92,0.2)` }}
+      >
+        <div className="row justify-content-center align-self-center bg-dark my-auto">
+          <h1>test</h1>
+        </div>
+      </div> */}
+
       <div
-        className="portfolio-area ptb--160 h-100 w-100 d-inline-block background"
         style={{
-          // backgroundImage: `url(/assets/images/bgpage/WWD.png)`,
-          backgroundRepeat: 'no-repeat',
+          display: 'flex',
+          flexDirection: 'column',
+          height: '100vh',
+          justifyContent: 'center',
+          background: `rgba(0,40,40,0.6)`,
         }}
       >
-        <div className="portfolio-sacousel-inner">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
-                  <h2 className="title">
-                    <span className="theme-gradient">What</span>
-                    <span className="text-light"> We </span>
-                    <span className="theme-gradient">Do</span>
-                  </h2>
-                </div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            background: 'rgba(0,40,40,0.8)',
+          }}
+        >
+          <Container className="ptb--100">
+            <h1 className="text-center">What We Do</h1>
+            <p className="text-light text-center">{`Republik Manor is a subsidiary company of Republikorp which engages in the field of real estate, property development, 
+and asset management. Currently focuses on three landbank development in Labuhan, Banten, Subang, and Batujajar West 
+Java, Indonesia.  Our landbank consist of over 100 Ha in the island of Java. `}</p>
+            <div className="mb--20"></div>
+            <div className="row justify-content-around">
+              <div className="col-lg-5">
+                <h2 className="text-right">Vision</h2>
+                <p
+                  className="text-justify text-light"
+                  style={{ direction: 'rtl' }}
+                >
+                  {`To establish a respected property development company in
+Indonesia that caters the needs of the defence industrial
+complex with integrated industrial solution, premium
+infrastructure access, and sustainable waste management.`}
+                </p>
+              </div>
+              <div className="col-lg-5">
+                <h2 className="">Vision</h2>
+                <p className="text-justify text-light">{`To develop and manage the biggest most integrated defence
+industrial complex in South East Asia by year 2030, servicing premium
+wspartners with worldwide class utilities and infrastructure access.`}</p>
               </div>
             </div>
-            <div className="row w-100 mb--10 justify-content-between mx-auto">
-              <div className="col-lg-5 col-md-3 col-sm-3 col-xs-3 p-3 align-items-stretch">
-                <div className="row justify-content-center mb--20">
-                  <img
-                    src="assets/images/icons/1_land.png"
-                    alt="tank"
-                    style={{ maxHeight: '80px' }}
-                  />
-                </div>
-                <h3 className="text-center mb--20">
-                  <span className="theme-gradient">Land</span>
-                  <span className="text-light"> System</span>
-                </h3>
-                <p className="text-light text-justify">
-                  Manufacturing ICCS system for the Indonesian Armed Forces. Its
-                  Digital component system provides continuous and automated
-                  video surveillance, providing a holistic view of a particular
-                  facility, and is able to identify friend or foe, anomalies and
-                  objects of interest using an advanced system of deep learning
-                  and command and control system.
-                </p>
-              </div>
-              <div
-                className="col-lg-5 col-md-3 col-sm-3 col-xs-3 p-3 align-items-center mx-10"
-                style={{}}
-              >
-                <div className="row justify-content-center mb--20">
-                  <img
-                    src="assets/images/icons/1_drone.png"
-                    alt="drone"
-                    style={{ maxHeight: '80px' }}
-                  />
-                </div>
-                <h3 className="text-center mb--20">
-                  <span className="theme-gradient">Aero</span>
-                  <span className="text-light"> System</span>
-                </h3>
-                <p className="text-light text-justify">
-                  Manufacturing Technology designs for War simulation system,
-                  manufactures data communications solutions for military,
-                  government and industrial applications and Anti - Drones that
-                  uses radio frequency disruption technology to deactivate enemy
-                  drones. We are developing A.I based solutions for Logistic,
-                  Operation Simulation, and War.
-                </p>
+          </Container>
+        </div>
+      </div>
+
+      {/* <div className="about-area justify-content-center align-items-center">
+        <div style={{ background: `rgba(255,255,92,0.2)` }}>
+          <div
+            className="about-wrapper"
+            style={{ background: `rgba(255,255,255,0.9)` }}
+          >
+            <div className="container bg-dark">
+              <div className="row">
+                <h2 className="font-weight-bold">WHAT WE DO</h2>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div>/*}
+
+      {/* <div id="whatwedo" className="about-area">
+        <div className="about-wrapper">
+          <div className="container h-100 bg-dark">
+            <div className="flex row h-100 w-100 align-items-center">
+              <div className="col-lg-5 my-auto">
+                <div className="about-inner inner">
+                  <div className="section-title ">
+                    <h2 className="font-weight-bold">WHAT WE DO</h2>
+                    <p className="text-light text-justify font-weight-regular">
+                      {description1}
+                    </p>
+                    <div className="mt--50" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 };

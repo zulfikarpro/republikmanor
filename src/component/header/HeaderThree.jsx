@@ -63,9 +63,9 @@ class HeaderThree extends Component {
     } else if (logo === 'symbol-dark') {
       logoUrl = (
         <img
-          src="/assets/images/logo/republikteknologi.png"
+          src="/assets/images/logo/logo1.png"
           alt="logo"
-          // style={{ maxWidth: '200px' }}
+          style={{ maxWidth: '200px' }}
         />
       );
     } else if (logo === 'symbol-light') {
@@ -76,13 +76,11 @@ class HeaderThree extends Component {
         />
       );
     } else {
-      logoUrl = <img src="/assets/images/logo/logo.png" alt="Digital Agency" />;
+      logoUrl = <img src="/assets/images/logo/logo.png" alt="Republik Manor" />;
     }
 
     return (
-      <header
-        className={`header-area header-style-three header--fixed ${color}`}
-      >
+      <header className={`header-area header--fixed `}>
         <div className="header-wrapper">
           <div className="header-left d-flex align-items-center">
             <div className="logo">
@@ -94,14 +92,7 @@ class HeaderThree extends Component {
           <nav className="mainmenunav d-lg-block ml--50">
             <Scrollspy
               className="mainmenu"
-              items={[
-                'home',
-                'whoweare',
-                'whatwedo',
-                'products',
-                'partner',
-                'contactus',
-              ]}
+              items={['home', 'whoweare', 'whatwedo', 'products', 'contactus']}
               currentClassName="is-current"
               offset={0}
             >
@@ -122,14 +113,14 @@ class HeaderThree extends Component {
               </li>
               <li>
                 <a href="#products" onClick={this.CLoseMenuTrigger}>
-                  Products
+                  Products & Service
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#partner" onClick={this.CLoseMenuTrigger}>
-                  Our Partner
+                  Contact Us
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="#contactus" onClick={this.CLoseMenuTrigger}>
                   Contact Us

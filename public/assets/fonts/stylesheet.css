@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Good Times Rg';
+    src: url('hinted-GoodTimesRg-Regular.woff2') format('woff2'),
+        url('hinted-GoodTimesRg-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -3,7 +3,12 @@ Blog Styles
 =====================*/
 
 .container {
-  //   background-color: #fc004d;
+  // background-color: #fc004d;
+  // width: 1800px;
+  @media #{$laptop-device} {
+    max-width: 1190px;
+    // margin-left: 6%;
+  }
 }
 .blog-style--1 {
   position: relative;

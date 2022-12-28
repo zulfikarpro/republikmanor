@@ -16,7 +16,7 @@
   width: 100%;
 
   @media #{$laptop-device} {
-    min-height: 900px;
+    min-height: 720px;
   }
   @media #{$sm-layout} {
     min-height: auto;
@@ -789,7 +789,11 @@ Slider Default Button And Dot STyle
   .slide-style-1 {
     .container {
       .row {
+        // padding-top: 20%;
+        // background-color: blue;
         .inner {
+          text-align: center;
+          // background-color: #f81f01;
           @media #{$sm-layout} {
             margin-top: 10%;
           }
@@ -798,6 +802,13 @@ Slider Default Button And Dot STyle
             font-size: $h2;
             @media #{$sm-layout} {
               font-size: $h3;
+            }
+          }
+          .h3 {
+            font-weight: 200;
+            font-size: $h3;
+            @media #{$sm-layout} {
+              font-size: $h4;
             }
           }
           .h4 {

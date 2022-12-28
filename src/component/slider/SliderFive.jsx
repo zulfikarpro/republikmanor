@@ -19,11 +19,11 @@ class SliderFive extends Component {
     return (
       <div
         className="slider-activation"
-        // style={{ background: `transparent` }}
+        style={{ background: `transparent`, height: '100vh' }}
       >
         {/* Start Single Slide */}
         <div
-          className="slide slide-style-1 slider-fixed--height d-flex align-items-center"
+          className="h-100 slide slide-style-1 slider-fixed--height d-flex align-items-center"
           data-black-overlay="6"
         >
           <div className="container">

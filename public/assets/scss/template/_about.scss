@@ -186,6 +186,9 @@
     @media #{$laptop-device} {
       padding: 60px;
     }
+    @media #{$sm-layout} {
+      background-position: right 20%;
+    }
   }
   @media #{$laptop-device} {
     background-size: contain;

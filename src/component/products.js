@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from 'react-slick';
 const productLTR = (images, title, text) => {
   return (
     <div className="container row mt--60 justify-content-between productItem">
@@ -57,24 +58,98 @@ const ProductPage = ({ images, label }) => {
     </>
   );
 };
+
+const PortfolioList = [
+  // {
+  //     // buttonLink: '/contact-us',
+  //     imageUrl: 'assets/images/workshop/wh03.jpg',
+  //     alt1:'workshop1',
+  // },
+  // {imageUrl: 'assets/images/workshop/workhsop_0001_1-04.jpg',
+  // alt2:'workshop2',},
+  //     {imageUrl: 'assets/images/workshop/workhsop_0002_1-04.jpg',
+  //     alt3:'workshop3',},
+  // {imageUrl: 'assets/images/workshop/workhsop_0003_1-03.jpg',},
+  // {imageUrl: 'assets/images/workshop/workhsop_0004_1-03.jpg',},
+  // {imageUrl: 'assets/images/workshop/workhsop_0005_1-02.jpg',},
+  // {imageUrl: 'assets/images/workshop/workhsop_0006_1-02.jpg',},
+  // {imageUrl: 'assets/images/workshop/workhsop_0007_1-01.jpg'},
+  {
+    image: 'image-1',
+    category: 'Lel',
+    title: ' Woyoooo',
+  },
+  {
+    image: 'image-2',
+    category: 'Development',
+    title: ' Getting tickets to the big show',
+  },
+  {
+    image: 'image-3',
+    category: 'Development',
+    title: ' Getting tickets to the big show',
+  },
+  {
+    image: 'image-4',
+    category: 'Development',
+    title: ' Getting tickets to the big show',
+  },
+  {
+    image: 'image-3',
+    category: 'Development',
+    title: ' Getting tickets to the big show',
+  },
+  {
+    image: 'image-4',
+    category: 'Development',
+    title: ' Getting tickets to the big show',
+  },
+];
+
 const Products = () => {
+  const slider = React.useRef(null);
   return (
-    <div id="products">
+    <div id="assets">
       <div
         className="row justify-content-center"
         style={{
-          background: `url(/assets/images/bgpage/bgproducts.jpg)`,
+          background: `url(/assets/images/bgpage/bgassets.jpg)`,
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPositionX: 'center',
           height: '100vh',
         }}
       >
-        <div className="col-lg-10 align-self-center">
-          <h2 className="text-dark text-center">PRODUCTS & SERVICES</h2>
+        <div className="col-lg-12 align-self-center mx-auto">
+          <h2 className="text-dark text-center">Our Assets</h2>
           <div className="container">
-            <div className="row mt--100 w--100">
-              <ProductPage
+            <div className="row mtb--100 justify-content-between">
+              <h1
+                onClick={() => slider.current.slickPrev()}
+                className=" arrow col-lg-2 flex text-center align-self-center"
+              >{`<`}</h1>
+              <div className="col-lg-8">
+                <div className="portfolio-slick-activation mt_sm--40">
+                  <Slider ref={slider} {...portfolioSlick2}>
+                    {PortfolioList.map((value, index) => (
+                      <div className="portfolio" key={index}>
+                        <div className="thumbnail-inner">
+                          <div className={`thumbnail ${value.image}`}></div>
+
+                          <div className={`bg-blr-image ${value.image}`}></div>
+                        </div>
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+              </div>
+
+              <h1
+                style={{ userSelect: 'none' }}
+                onClick={() => slider.current.slickNext()}
+                className=" arrow col-lg-2 text-center align-self-center"
+              >{`>`}</h1>
+              {/* <ProductPage
                 images={'product-01.png'}
                 label={'Assets Management'}
               />
@@ -82,59 +157,53 @@ const Products = () => {
                 images={'product-02.png'}
                 label={'Investment Banking'}
               />
-              <ProductPage images={'product-03.png'} label={'Corporate M&A'} />
+              <ProductPage images={'product-03.png'} label={'Corporate M&A'} /> */}
             </div>
           </div>
-          {/* <div className="section-title text-center service-style--3 mb--30 mb_sm--0">
-            <h2 className="title theme-gradient">PRODUCTS</h2>
-            <h2 className="text-center">ICCS</h2>
-          </div>
-          <h4 className="text-center">
-            CCS is indeed a step ahead in terms of shipboard communications
-            management,
-            <br /> supporting high-level concepts such as COMPLAND and on-board
-            training facilities
-          </h4>
-          {productLTR(
-            'assets/images/products/tablet.png',
-            'Commander Tablet',
-            'All-in-one wearable computing unit that enables the tablet to provide the dismounted soldier with complete situational awareness through net-centric integrated information systems. application provides real-time situational awareness with automatic dissemination of geography and location based on hierarchy. BMS enables enhancement C2 capabilities for all members of the platoon, including Blue Force Tracking, enemy (red) tracking, mission planning, navigation, terrain analysis and 3D visualization. The system can be integrated with multiple communications networks, including the battle management system. ',
-          )}
-          {productRTL(
-            'assets/images/products/wristview.png',
-            'Smart WristView',
-            'Compact. low-powered, rugged wrist-strapped C2 display, providing warrios with a quick and convenient view of operational data in combat situations without altering weapons hold.',
-          )}
-          {productLTR(
-            'assets/images/products/smartsight.png',
-            'SmartSight',
-            'Add-on to most existing day and night weapon sights, projecting see-through AR symbology, laser rangefinder data and a compass onto the soldiers weapon sight, greatly improving taget acquisition capabilities and combat effectiveness.',
-          )}
-
-          {productRTL(
-            'assets/images/products/radio.png',
-            'Radio Intercom',
-            'The personal network radio features advanced technology that enables PERSONNEL ICCS to provide the dismounted soldier with combat-proven simultaneous digital voice and data communications on the battlefield.',
-            [
-              'Channel equalization.',
-              'Error correction.',
-              'Routing and networking.',
-              'Ad-hoc networking and automatic voice/data relays.',
-              'Full-duplex conference capability up to six speakers.',
-              'Long-range (3 Km) communications. ',
-              'Robust build for complex terrain.',
-              'Low power consumption.',
-            ],
-          )}
-          {productLTR(
-            'assets/images/products/smarteye.png',
-            'Smarteye - headmounted C2 display',
-            'Ballistic goggles that provide descending commanders with a C2 display\nthat installed in the head geo-geographically oriented. Projecting Augmented\nsymbology Reality (AR) translucent on the visor and allows real-time\nimage detection, SmartEye provides users with instant situational\nawareness, an integrated lens with AGD to show Red Force coordinates\nand possible threats. SmartEye interacts with a variety of visual sources\nincluding scenery weapons, Unmanned Aircraft Systems (UAS) and input from\nreconnaissance units.',
-          )} */}
         </div>
       </div>
     </div>
   );
+};
+
+export const portfolioSlick2 = {
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 993,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 481,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 };
 
 export default Products;

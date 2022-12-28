@@ -92,7 +92,7 @@ class HeaderThree extends Component {
           <nav className="mainmenunav d-lg-block ml--50">
             <Scrollspy
               className="mainmenu"
-              items={['home', 'whoweare', 'whatwedo', 'products', 'contactus']}
+              items={['home', 'whoweare', 'whatwedo', 'assets', 'contactus']}
               currentClassName="is-current"
               offset={0}
             >
@@ -112,8 +112,8 @@ class HeaderThree extends Component {
                 </a>
               </li>
               <li>
-                <a href="#products" onClick={this.CLoseMenuTrigger}>
-                  Products & Service
+                <a href="#assets" onClick={this.CLoseMenuTrigger}>
+                  Our Assets
                 </a>
               </li>
               {/* <li>

@@ -14,18 +14,19 @@ const WhoWeAre = () => {
         <div className="about-area">
           <div className="about-wrapper whoweare px-6">
             {/* <div className="container h-100"> */}
-            <div className="flex row h-100 align-items-center justify-content-end">
-              <div className="col-xl-5 col-lg-4 my-auto">
+            <div className="flex row h-100 w-100 align-items-end justify-content-end">
+              <div className="col-xl-5 col-lg-4 col-sm-12 my-auto">
                 <div className="about-inner inner">
                   <div className="section-title ">
                     <h2 className="font-weight-bold">WHO WE ARE</h2>
-                    <p className="text-light text-justify font-weight-regular pr--90">
+                    <p className="text-light text-justify font-weight-regular px-40">
                       {description1}
                     </p>
                     <div className="mt--50" />
                   </div>
                 </div>
               </div>
+              <div></div>
             </div>
             {/* </div> */}
           </div>

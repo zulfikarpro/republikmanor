@@ -19,6 +19,7 @@ import BlogContent from '../elements/blog/BlogContent';
 import WhoWeAre from '../component/whoweare';
 import Whatwedo from '../component/whatwedo';
 import Products from '../component/products';
+import { Container } from 'react-bootstrap';
 // import ProductAi from '../component/productsai';
 // import MobileSOC from '../component/mobileSoc';
 // import AntiDrone from '../component/antidrone';
@@ -216,26 +217,8 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-      {/* <div
-        className="position-absolute"
-        style={{ height: '100vh', width: '100vw', zIndex: -1 }}
-      >
-        <div className="position-fixed d-inline-block h-100 w-100">
-          <div className="row justify-content-center bg-success">
-            <video
-              className="hidden position-fixed d-inline-block videos"
-              playsinline="playsinline"
-              autoplay="autoplay"
-              muted="muted"
-              loop="loop"
-              src="/assets/video/KAPITAL.mp4"
-              style={{ zIndex: -1, width: '100vw' }}
-            />
-          </div>
-        </div>
-      </div> */}
       <div className="active-dark bg-transparent" style={{ zIndex: 100 }}>
-        <Helmet pageTitle="Republik Kapital" />
+        <Helmet pageTitle="Republik Manor" />
 
         <HeaderThree
           className="mx-auto"
@@ -249,7 +232,7 @@ const MainPage = () => {
         </div>
         <WhoWeAre />
         <Whatwedo />
-        {/* <Products /> */}
+        <Products />
         <div
           className="groupComp"
           style={{
@@ -260,8 +243,28 @@ const MainPage = () => {
             height: '100vh',
           }}
         >
-          <div className="container justify-content-between">
-            <h2 className="text-dark text-center mb--100">Member of</h2>
+          {/* <Container className="h-100 container col align-items-center justify-content-between bg-primary"> */}
+          <div
+            className="container h-100"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}
+          >
+            <h2 className="row text-dark text-center align-self-center">
+              Member of
+            </h2>
+            <div className="row align-items-center">
+              <img
+                className="thumbnail bg-transparent mx-auto"
+                src="/assets/images/logo/republikorp2.png"
+                alt="republikorp"
+                style={{ width: '80%' }}
+              />
+            </div>
+          </div>
+          {/* <h2 className="row text-dark text-center ">Member of</h2>
             <div className="row align-items-center">
               <img
                 className="thumbnail bg-transparent mx-auto"
@@ -269,8 +272,8 @@ const MainPage = () => {
                 alt="republikorp"
                 style={{ maxWidth: '60%' }}
               />
-            </div>
-          </div>
+            </div> */}
+          {/* </Container> */}
         </div>
 
         <div
@@ -282,20 +285,17 @@ const MainPage = () => {
           }}
         >
           <div id="contactus" className="container">
-            <div className="col justify-content-around">
+            <div className="col justify-content-center">
               <div className="row align-items-center">
                 <img
                   src="/assets/images/logo/logo2.png"
                   alt="logo"
-                  style={{ maxWidth: '60%' }}
+                  style={{ width: '80%' }}
                   className="mb-4 mx-auto"
                 />
               </div>
 
-              <p
-                className="text-center font-weight-bold"
-                style={{ color: 'black' }}
-              >
+              <p className="text-center" style={{ color: 'black' }}>
                 RPX Building 9<sup>th</sup> Floor
                 <br />
                 Ciputat Raya No. 99

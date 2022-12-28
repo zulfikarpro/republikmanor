@@ -58,7 +58,7 @@ infrastructure access, and sustainable waste management.`}
                 </p>
               </div>
               <div className="col-lg-5">
-                <h2 className="">Vision</h2>
+                <h2 className="">Mission</h2>
                 <p className="text-justify text-light">{`To develop and manage the biggest most integrated defence
 industrial complex in South East Asia by year 2030, servicing premium
 wspartners with worldwide class utilities and infrastructure access.`}</p>

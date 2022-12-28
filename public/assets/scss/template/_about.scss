@@ -170,6 +170,27 @@
     }
   }
 }
+.whatwedo {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  background: rgba(0, 40, 40, 0.6);
+  @media #{$sm-layout} {
+    height: 150vh;
+  }
+  .boldcontainer {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 40, 40, 0.8);
+    .titleleft {
+      text-align: right;
+      @media #{$sm-layout} {
+        text-align: left;
+      }
+    }
+  }
+}
 .about-wrapper {
   background: transparent;
   background-size: cover;
@@ -226,6 +247,14 @@
   }
 }
 
+.h2 {
+  &.titleleft {
+    text-align: right;
+    @media #{$sm-layout} {
+      text-align: left;
+    }
+  }
+}
 .about-position-top {
   @media #{$lg-layout} {
     padding-top: 120px;

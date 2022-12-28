@@ -52,100 +52,112 @@ class HeaderThree extends Component {
     }
     const { logo, color = 'default-color' } = this.props;
     let logoUrl;
-    if (logo === 'light') {
-      logoUrl = (
-        <img src="/assets/images/logo/logo-light.png" alt="Digital Agency" />
-      );
-    } else if (logo === 'dark') {
-      logoUrl = (
-        <img src="/assets/images/logo/logo-dark.png" alt="Digital Agency" />
-      );
-    } else if (logo === 'symbol-dark') {
-      logoUrl = (
-        <img
-          src="/assets/images/logo/logo1.png"
-          alt="logo"
-          style={{ maxWidth: '200px' }}
-        />
-      );
-    } else if (logo === 'symbol-light') {
-      logoUrl = (
-        <img
-          src="/assets/images/logo/logo-symbol-light.png"
-          alt="Digital Agency"
-        />
-      );
-    } else {
-      logoUrl = <img src="/assets/images/logo/logo.png" alt="Republik Manor" />;
-    }
+    logoUrl = (
+      <img
+        className="ptb--26"
+        src="/assets/images/logo/logo3.png"
+        alt="logo"
+        style={{ width: '230px' }}
+      />
+    );
+    // if (logo === 'light') {
+    //   logoUrl = (
+    //     <img src="/assets/images/logo/logo-light.png" alt="Digital Agency" />
+    //   );
+    // } else if (logo === 'dark') {
+    //   logoUrl = (
+    //     <img src="/assets/images/logo/logo-dark.png" alt="Digital Agency" />
+    //   );
+    // } else if (logo === 'symbol-dark') {
+    //   logoUrl = (
+    //     <img
+    //       src="/assets/images/logo/logo1.png"
+    //       alt="logo"
+    //       style={{ maxWidth: '200px' }}
+    //     />
+    //   );
+    // } else if (logo === 'symbol-light') {
+    //   logoUrl = (
+    //     <img
+    //       src="/assets/images/logo/logo-symbol-light.png"
+    //       alt="Digital Agency"
+    //     />
+    //   );
+    // } else {
+    //   logoUrl = <img src="/assets/images/logo/logo.png" alt="Republik Manor" />;
+    // }
 
     return (
       <header className={`header-area header--fixed `}>
-        <div className="header-wrapper">
-          <div className="header-left d-flex align-items-center">
-            <div className="logo">
-              <a href={'/'}>{logoUrl}</a>
+        <div className="container">
+          <div className="header-wrapper">
+            <div className="header-left d-flex align-items-center">
+              <div className="logo">
+                <a href={'/'}>{logoUrl}</a>
+              </div>
             </div>
-          </div>
 
-          <div className="header-right d-flex align-items-center"></div>
-          <nav className="mainmenunav d-lg-block ml--50">
-            <Scrollspy
-              className="mainmenu"
-              items={['home', 'whoweare', 'whatwedo', 'assets', 'contactus']}
-              currentClassName="is-current"
-              offset={0}
-            >
-              <li>
-                <a href="#home" onClick={this.CLoseMenuTrigger}>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#whoweare" onClick={this.CLoseMenuTrigger}>
-                  Who We Are
-                </a>
-              </li>
-              <li>
-                <a href="#whatwedo" onClick={this.CLoseMenuTrigger}>
-                  What We Do
-                </a>
-              </li>
-              <li>
-                <a href="#assets" onClick={this.CLoseMenuTrigger}>
-                  Our Assets
-                </a>
-              </li>
-              {/* <li>
+            <div className="header-right d-flex align-items-center"></div>
+            <nav className="mainmenunav d-lg-block ml--50">
+              <Scrollspy
+                className="mainmenu"
+                items={['home', 'whoweare', 'whatwedo', 'assets', 'contactus']}
+                currentClassName="is-current"
+                offset={0}
+              >
+                <li>
+                  <a href="#home" onClick={this.CLoseMenuTrigger}>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#whoweare" onClick={this.CLoseMenuTrigger}>
+                    Who We Are
+                  </a>
+                </li>
+                <li>
+                  <a href="#whatwedo" onClick={this.CLoseMenuTrigger}>
+                    What We Do
+                  </a>
+                </li>
+                <li>
+                  <a href="#assets" onClick={this.CLoseMenuTrigger}>
+                    Our Assets
+                  </a>
+                </li>
+                {/* <li>
                 <a href="#partner" onClick={this.CLoseMenuTrigger}>
                   Contact Us
                 </a>
               </li> */}
-              <li>
-                <a href="#contactus" onClick={this.CLoseMenuTrigger}>
-                  Contact Us
-                </a>
-              </li>
+                <li>
+                  <a href="#contactus" onClick={this.CLoseMenuTrigger}>
+                    Contact Us
+                  </a>
+                </li>
 
-              {/* <li><a href="#service">Service</a></li> */}
-              {/* <li><a href="#blog">Blog</a></li>
+                {/* <li><a href="#service">Service</a></li> */}
+                {/* <li><a href="#blog">Blog</a></li>
                                 <li><a href="#contact">Contact</a></li> */}
-            </Scrollspy>
-          </nav>
+              </Scrollspy>
+            </nav>
 
-          <div className="humberger-menu d-block d-lg-none pl--20">
-            <span onClick={this.menuTrigger} className="menutrigger text-white">
-              <FiMenu />
-            </span>
+            <div className="humberger-menu d-block d-lg-none pl--20">
+              <span
+                onClick={this.menuTrigger}
+                className="menutrigger text-white"
+              >
+                <FiMenu />
+              </span>
+            </div>
+            <div className="close-menu d-block d-lg-none">
+              <span onClick={this.CLoseMenuTrigger} className="closeTrigger">
+                <FiX />
+              </span>
+            </div>
           </div>
-          <div className="close-menu d-block d-lg-none">
-            <span onClick={this.CLoseMenuTrigger} className="closeTrigger">
-              <FiX />
-            </span>
-          </div>
-        </div>
-        {/* <div className="header-right"> */}
-        {/* <div className="social-share-inner">
+          {/* <div className="header-right"> */}
+          {/* <div className="social-share-inner">
                             <ul className="social-share social-style--2 color-black d-flex justify-content-start liststyle">
                                 {SocialShare.map((val , i) => (
                                     <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
@@ -157,7 +169,8 @@ class HeaderThree extends Component {
                                 <span>buy now</span>
                             </a>
                         </div> */}
-        {/* </div> */}
+          {/* </div> */}
+        </div>
       </header>
     );
   }

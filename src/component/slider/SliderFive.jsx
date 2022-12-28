@@ -19,7 +19,11 @@ class SliderFive extends Component {
     return (
       <div
         className="slider-activation"
-        style={{ background: `transparent`, height: '100vh' }}
+        style={{
+          background: `transparent`,
+          height: '100vh',
+          backgroundColor: `rgba(0,40,40,0.8)`,
+        }}
       >
         {/* Start Single Slide */}
         <div

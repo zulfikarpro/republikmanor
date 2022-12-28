@@ -128,12 +128,12 @@ h6,
 @media #{$sm-layout} {
   h1,
   .h1 {
-    font-size: $h1 / 2;
+    font-size: calc($h1 / 2);
   }
 
   h2,
   .h2 {
-    font-size: $h2 / 2;
+    font-size: calc($h2 / 2);
   }
   h3,
   .h3 {

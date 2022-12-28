@@ -201,18 +201,23 @@ const MainPage = () => {
     <>
       <div
         className="position-absolute"
-        style={{ height: '100vh', width: '100vw', zIndex: -1 }}
+        style={{
+          height: '100vh',
+          width: '100vw',
+          zIndex: -1,
+          overflow: 'hidden',
+        }}
       >
         <div className="position-fixed d-inline-block h-100 w-100">
           <div className="row justify-content-center bg-success">
             <video
-              className="hidden position-fixed d-inline-block videos"
+              className="position-fixed d-inline-block videos"
               playsinline="playsinline"
               autoplay="autoplay"
               muted="muted"
               loop="loop"
-              src="/assets/video/1.mp4"
-              style={{ zIndex: -1 }}
+              src="/assets/video/manor2.mp4"
+              style={{ zIndex: -2 }}
             />
           </div>
         </div>
@@ -300,9 +305,9 @@ const MainPage = () => {
                 <br />
                 Ciputat Raya No. 99
                 <br />
-                South Jakarta, Indonesia, 12310
+                DKI Jakarta, Indonesia, 12310
                 <br />
-                +62 21 75 918 007 - info@republikapital.com
+                +62 21 75 918 007 - info@republimanor.com
               </p>
 
               <div
